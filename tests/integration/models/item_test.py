@@ -24,7 +24,7 @@ class ItemTest(BaseTest):
     def test_store_relationship(self):
         with self.app_context():
             store = StoreModel('test_store')
-            item = ItemModel('test', 19.99, 1)
+            item = ItemModel(None, 'test', 19.99, 1)
 
             store.save_to_db()
             item.save_to_db()
