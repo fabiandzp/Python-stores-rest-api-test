@@ -17,7 +17,7 @@ class StoreTest(BaseTest):
                 r = c.get('/store/test')
 
                 self.assertEqual(r.status_code, 200)
-                self.assertDictEqual(d1={'id': None, 'name': 'test', 'items': []},
+                self.assertDictEqual(d1={'id': 1, 'name': 'test', 'items': []},
                                      d2=json.loads(r.data))
 
     def test_store_with_items_found(self):
