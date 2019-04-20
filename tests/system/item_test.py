@@ -35,7 +35,7 @@ class ItemTest(BaseTest):
                 r = c.get('/item/test', headers={'Authorization': self.auth_header})
 
                 self.assertEqual(r.status_code, 200)
-                self.assertDictEqual(d1={'id': None, 'name': 'test', 'price': 17.99},
+                self.assertDictEqual(d1={'id': 1, 'name': 'test', 'price': 17.99},
                                      d2=json.loads(r.data))
 
     def test_delete_item(self):
